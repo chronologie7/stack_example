@@ -21,12 +21,13 @@ int main()
     std::cout << "How many elements do you want insert?: ";
     std::cin >> numElements;
 
-    for (int x = 0; x < numElements; x++)
+    while (numElements > 0)
     {
         std::cin >> element;
         elementsStack.push(element);
+        numElements--;
     }
-
+    
     printStackElements(elementsStack);
 
     return 0;
